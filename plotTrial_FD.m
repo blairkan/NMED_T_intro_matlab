@@ -60,4 +60,3 @@ xlim('tight') % Remove excess x-axis space in the plot.
 
 ax = gca;
 
-
