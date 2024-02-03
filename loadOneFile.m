@@ -3,8 +3,8 @@ function X0 = loadOneFile(songNumber)
 % -----------------------------------
 % Blair Kaneshiro - Feb 2024
 %
-% This function loads the data from the specified song, DC-corrects each
-% channel, and also permutes the dimensions from [space x time x trial] to
+% This function loads the data from the specified song, DC corrects each
+% trial, and also permutes the dimensions from [space x time x trial] to
 % [time x space x trial].
 %
 % Concepts covered: Function returning a variable, assert, nargin, string
