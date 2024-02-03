@@ -1,4 +1,4 @@
-function X0 = loadOneFile(songNumber)
+function X = loadOneFile(songNumber)
 % X = loadOneFile(songNumber)
 % -----------------------------------
 % Blair Kaneshiro - Feb 2024
@@ -19,6 +19,11 @@ function X0 = loadOneFile(songNumber)
 %
 % Note that other variables in the input data file (e.g., fs, participant
 % identifiers) are not returned by this function.
+%
+% Example function call: 
+%   song21Data = loadOneFile(21); --> [34795x125x20] 3D matrix
+%
+% See also: loadMultipleFiles
 
 % Make sure the user entered exactly one input
 assert(nargin == 1, 'This function requires one input (the song number).')
