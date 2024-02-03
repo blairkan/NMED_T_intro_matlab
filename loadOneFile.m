@@ -7,7 +7,7 @@ function X = loadOneFile(songNumber)
 % trial, and also permutes the dimensions from [space x time x trial] to
 % [time x space x trial].
 %
-% Concepts covered: Function returning a variable, assert, nargin, string
+% Concepts covered: Function returning one output, assert, nargin, string
 % concatenation, file loading, try/catch, eval, 'for' loop.
 %
 % Input (required)

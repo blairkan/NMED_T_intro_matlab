@@ -11,7 +11,7 @@ function XCell = loadMultipleFiles(filesToUse)
 %   space x trial]
 % - Appends the resulting 3D matrix as an element of a {10 x 1} cell array.
 %
-% Concepts covered: Function returning a variable, nargin, assert, length,
+% Concepts covered: Function returning one output, nargin, assert, length,
 % cell array, 'for' loop.
 %
 % Input: 
