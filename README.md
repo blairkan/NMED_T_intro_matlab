@@ -6,7 +6,7 @@ This repo contains examples on how to load and work with data from the [NMED-T d
 
 ## How to use
 
-These examples are structured as a set of functions, which each do one thing. Users can call the functions in their own analyses, or pull out the content of a given function into their own function or script. 
+These examples are structured as a set of functions, each of which do one thing. Users can call the functions in their own analyses, or pull out the content of a given function into their own function or script. Files beginning with "example_" are scripts, which show how one or more functions can be called. 
 
 It is the responsibility of the user to already have the ready-to-use NMED data files downloaded and [added to their Matlab path](https://www.mathworks.com/help/matlab/ref/addpath.html). 
 
