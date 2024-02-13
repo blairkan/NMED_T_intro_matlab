@@ -68,7 +68,8 @@ for cond=1:nCond
             % not as slow as it would seem (easies memory load)
             sXX=0; sXY=0; sYY=0;
             nXX=0; nXY=0; nYY=0;
-            parfor p=1:nPairs
+            % parfor p=1:nPairs
+            for p=1:nPairs
                 M1=squeeze(thisVolume(:,:,pindx(p,1)));
                 M2=squeeze(thisVolume(:,:,pindx(p,2)));
                 
