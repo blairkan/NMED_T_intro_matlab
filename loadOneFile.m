@@ -54,3 +54,5 @@ end
 
 % Permute the data dimensions
 X = permute(XDC, [2 1 3]);
+
+disp(['Loaded file ' fnIn])
