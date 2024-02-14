@@ -69,7 +69,7 @@ nReg = 7; % Regularization parameter - probably don't need to change ever
 [dataOut,W,A,Rxx,Ryy,Rxy,dGen] = rcaRun125_parpoolAlready2021(...
     X, nReg, nComp, [], [], 0, []);
 
-%% Look at RCA output data
+%% Address singleton dimension of output data if applicable
 
 % The size of the output data are time x component x trial, e.g.,
 % dataOut      [36114 x 1 x 20] for Song 25. 
@@ -85,8 +85,9 @@ if size(dataOut,2) == 1, dataOut = squeeze(dataOut); end
 %% Visualize output data
 
 % We can visualize the spatial filter 
+% 2nd function input is whether to plot the colorbar alongside
 figure()
-plotOnEgi129_NG(nanFill125To129(A(:,1)))
+visualizeRCTopo125(A(:,1), 1)
 
 % We could average the data across trials and plot the average
 % The "2" here indicates that we want to average across the 2nd (trial)
@@ -94,6 +95,8 @@ plotOnEgi129_NG(nanFill125To129(A(:,1)))
 dataOut_trialAverage = mean(dataOut, 2);
 
 %%% We could plot the data in a few different ways
+figure()
+
 % Trial-averaged RC1 data: Time domain
 subplot(3, 1, 1)
 plotTrial_TD(dataOut_trialAverage)
