@@ -21,7 +21,7 @@ addpath(genpath(pwd))
 % NOTE: The data files should also be in your path already.
 
 % Let's say we want to work with the data from song 25. 
-songUse = 25;
+songUse = 26;
 
 % Load the data from that song
 X = loadOneFile(25); % Will be a 3D [time x space x trial] matrix
@@ -76,7 +76,10 @@ nReg = 7; % Regularization parameter - probably don't need to change ever
 % If we compute only 1 component, there is a "singleton" dimension in the
 % middle that will be annoying later on. We can get rid of it using the
 % "squeeze" function.
-if size(dataOut,2) == 1, dataOut = squeeze(dataOut); end
+if size(dataOut,2) == 1 
+    dataOut = squeeze(dataOut); 
+    disp(['Removed singleton dimension from RCA output data.'])
+end
 
 % In this case of returning only 1 component, dataOut is now a 2D matrix
 % after squeezing!  
