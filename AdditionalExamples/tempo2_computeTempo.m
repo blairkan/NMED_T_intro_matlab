@@ -15,7 +15,7 @@ fn = 'CantYouSee';
 inDir = '';
 outDir = '';
 
-% Add a path to LabROSA tempo2 and beat2 functions
+% Add a path to "coversongs" code
 addpath(genpath(''));
 
 % Remove path to EEGLAB if you have it
