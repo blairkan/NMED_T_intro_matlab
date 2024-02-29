@@ -153,7 +153,33 @@ b = [1:5; 6:10; 11:15; 16:20]; % Create small matrix. ; separates rows.
 
 b1 = b(2, 5); % Row 2, column 5
 
-% The colon operator makes another appearance as a way to index all
-% elements of a given dimension. 
-b2 = b(3, :); % Row 3, all columns
-b3 = b(:, 4); % All rows, column 4
+% You can index ranges of rows and/or columns using the colon operator:
+b2 = b(1:2, 4:5); % Rows 1 and 2, columns 4 and 5
+
+% You can also specify ranges explicitly
+b3 = b([1 4], [1 4 5]); % Rows 1 and 4; columns 1, 4, and 5
+
+% The colon operator makes another appearance, now as a way to index 
+% *all elements* of a given dimension. 
+b4 = b(3, :); % Row 3, all columns
+b5 = b(:, 4); % All rows, column 4
+
+%%% Removing element(s) from matrix or vector: You can remove matrix
+%%% elements, or vector rows and columns, by setting those values to an
+%%% empty vector [ ].
+c = 601:610; % Vector
+c1 = c; c1(3) = []; % Remove the 3rd element of c1, leaving 9 elements
+
+% Matlab matrices must have the same number of elements across all the
+% rows, and same number across all the columns. Therefore, if you are
+% removing content from a matrix, you are typically removing entire rows or
+% columns.
+d = b; % Copy above matrix into a new variable
+d1 = d; 
+% d1(3, 5) = [ ]; % This won't work! 
+d1(3,:) = [ ]; % Remove the 3rd row from d1
+% d1 =
+% 
+%      1     2     3     4     5
+%      6     7     8     9    10
+%     16    17    18    19    20
